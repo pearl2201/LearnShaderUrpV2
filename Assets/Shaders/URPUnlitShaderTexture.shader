@@ -4,16 +4,11 @@ Shader "Unlit/URPUnlitShaderTexture"
         [MainTexture] _MainText("Main Texture", 2D) = "white" {}
     }
     SubShader{
-        Tags {
-            "RenderType" = "Opaque"
-            "RenderPipeline" = "UniversalPipeline"
-            "Queue" = "Geometry"
-        
-        }
+        Tags { "RenderType" = "Opaque" "RenderPipeline" = "UniversalPipeline" "Queue" = "Geometry" }
 
 
         Pass{
- HLSLPROGRAM
+            HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
